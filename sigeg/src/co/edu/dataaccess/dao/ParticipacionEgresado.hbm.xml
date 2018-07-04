@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="co.edu.dataaccess.dao.ParticipacionEgresado" table="ParticipacionEgresado" catalog="SIGEG" optimistic-lock="version">
+
+		<id name="idParticipacionEgresado" type="java.lang.Long">
+			<column name="IdParticipacionEgresado" />
+			<generator class="identity" />
+		</id>
+		<property name="idParticipacionDemocratica" type="java.lang.Long">
+			<column name="IdParticipacionDemocratica" length="10" not-null="false" />
+		</property>
+		<property name="idEgresado" type="java.lang.Long">
+			<column name="IdEgresado" length="10" not-null="false" />
+		</property>
+		<property name="inscrito" type="java.lang.Long">
+			<column name="Inscrito" length="10" not-null="true" />
+		</property>
+		<property name="elegido" type="java.lang.Long">
+			<column name="Elegido" length="10" not-null="true" />
+		</property>
+		<property name="socioFundador" type="java.lang.Long">
+			<column name="SocioFundador" length="10" not-null="true" />
+		</property>
+		<property name="socioAdherente" type="java.lang.Long">
+			<column name="SocioAdherente" length="10" not-null="true" />
+		</property>
+		<property name="beneficiario" type="java.lang.Long">
+			<column name="Beneficiario" length="10" not-null="true" />
+		</property>
+
+	</class>
+</hibernate-mapping>

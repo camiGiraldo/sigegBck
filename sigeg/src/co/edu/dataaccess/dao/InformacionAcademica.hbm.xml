@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="co.edu.dataaccess.dao.InformacionAcademica" table="InformacionAcademica" catalog="SIGEG" optimistic-lock="version">
+
+		<id name="idInformacionAcademica" type="java.lang.Long">
+			<column name="IdInformacionAcademica" />
+			<generator class="identity" />
+		</id>
+		<property name="idEgresado" type="java.lang.Long">
+			<column name="IdEgresado" length="10" not-null="false" />
+		</property>
+		<property name="idPrograma" type="java.lang.Long">
+			<column name="IdPrograma" length="10" not-null="false" />
+		</property>
+		<property name="Libro" type="java.lang.String">
+			<column name="Libro" length="20" not-null="true" />
+		</property>
+		<property name="Folio" type="java.lang.String">
+			<column name="Folio" length="20" not-null="true" />
+		</property>
+		<property name="Acta" type="java.lang.String">
+			<column name="Acta" length="20" not-null="true" />
+		</property>
+		<property name="numeroDiploma" type="java.lang.String">
+			<column name="NumeroDiploma" length="20" not-null="true" />
+		</property>
+		<property name="semestreGrado" type="java.lang.String">
+			<column name="SemestreGrado" length="10" not-null="false" />
+		</property>
+		<property name="formaGrado" type="java.lang.String">
+			<column name="FormaGrado" length="20" not-null="false" />
+		</property>
+		<property name="tipoOpcionGrado" type="java.lang.String">
+			<column name="TipoOpcionGrado" length="50" not-null="true" />
+		</property>
+		<property name="notaOpcionGrado" type="java.lang.String">
+			<column name="NotaOpcionGrado" length="5" not-null="true" />
+		</property>
+		<property name="semestreFinalizoMaterias" type="java.lang.String">
+			<column name="SemestreFinalizoMaterias" length="10" not-null="true" />
+		</property>
+
+	</class>
+</hibernate-mapping>

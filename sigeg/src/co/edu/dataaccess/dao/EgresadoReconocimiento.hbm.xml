@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="co.edu.dataaccess.dao.EgresadoReconocimiento" table="EgresadoReconocimiento" catalog="SIGEG" optimistic-lock="version">
+
+		<id name="idEgresadoReconocimiento" type="java.lang.Long">
+			<column name="IdEgresadoReconocimiento" />
+			<generator class="identity" />
+		</id>
+		<property name="idReconocimiento" type="java.lang.Long">
+			<column name="IdReconocimiento" length="10" not-null="false" />
+		</property>
+		<property name="idEgresado" type="java.lang.Long">
+			<column name="IdEgresado" length="10" not-null="false" />
+		</property>
+		<property name="distinguido" type="java.lang.Long">
+			<column name="Distinguido" length="10" not-null="true" />
+		</property>
+		<property name="vinculadoLaboralmente" type="java.lang.Long">
+			<column name="VinculadoLaboralmente" length="10" not-null="true" />
+		</property>
+		<property name="logroPublicado" type="java.lang.Long">
+			<column name="LogroPublicado" length="10" not-null="true" />
+		</property>
+		<property name="urlExterna" type="java.lang.String">
+			<column name="UrlExterna" length="1000" not-null="true" />
+		</property>
+		<property name="soporte" type="java.lang.Long">
+			<column name="Soporte" length="10" not-null="true" />
+		</property>
+
+	</class>
+</hibernate-mapping>

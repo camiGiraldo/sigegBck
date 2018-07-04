@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="co.edu.dataaccess.dao.Programa" table="Programa" catalog="SIGEG" optimistic-lock="version">
+
+		<id name="idPrograma" type="java.lang.Long">
+			<column name="IdPrograma" />
+			<generator class="identity" />
+		</id>
+		<property name="idFacultad" type="java.lang.Long">
+			<column name="IdFacultad" length="10" not-null="false" />
+		</property>
+		<property name="nombre" type="java.lang.String">
+			<column name="Nombre" length="70" not-null="false" />
+		</property>
+		<property name="abreviatura" type="java.lang.String">
+			<column name="Abreviatura" length="6" not-null="false" />
+		</property>
+
+	</class>
+</hibernate-mapping>

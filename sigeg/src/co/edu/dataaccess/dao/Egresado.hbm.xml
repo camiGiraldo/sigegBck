@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="co.edu.dataaccess.dao.Egresado" table="Egresado" catalog="SIGEG" optimistic-lock="version">
+
+		<id name="idEgresado" type="java.lang.Long">
+			<column name="IdEgresado" />
+			<generator class="identity" />
+		</id>
+		<property name="nombres" type="java.lang.String">
+			<column name="Nombres" length="50" not-null="false" />
+		</property>
+		<property name="apellidos" type="java.lang.String">
+			<column name="Apellidos" length="50" not-null="false" />
+		</property>
+		<property name="tipoIdentificacion" type="java.lang.String">
+			<column name="TipoIdentificacion" length="2" not-null="false" />
+		</property>
+		<property name="identificacion" type="java.lang.String">
+			<column name="Identificacion" length="12" not-null="false" />
+		</property>
+		<property name="ciudadExpedicion" type="java.lang.String">
+			<column name="CiudadExpedicion" length="40" not-null="false" />
+		</property>
+		<property name="paisResidencia" type="java.lang.String">
+			<column name="PaisResidencia" length="60" not-null="false" />
+		</property>
+		<property name="ciudadResidencia" type="java.lang.String">
+			<column name="CiudadResidencia" length="40" not-null="false" />
+		</property>
+		<property name="direccionResidencia" type="java.lang.String">
+			<column name="DireccionResidencia" length="70" not-null="true" />
+		</property>
+		<property name="telefonoFijo" type="java.lang.Long">
+			<column name="TelefonoFijo" length="10" not-null="true" />
+		</property>
+		<property name="telefonoMovil" type="java.lang.Long">
+			<column name="TelefonoMovil" length="10" not-null="true" />
+		</property>
+		<property name="telefonoMovilAlterno" type="java.lang.Long">
+			<column name="TelefonoMovilAlterno" length="10" not-null="true" />
+		</property>
+		<property name="correoElectronico" type="java.lang.String">
+			<column name="CorreoElectronico" length="80" not-null="false" />
+		</property>
+		<property name="correoElectronicoAlterno" type="java.lang.String">
+			<column name="CorreoElectronicoAlterno" length="80" not-null="true" />
+		</property>
+		<property name="fechaCreacion" type="java.sql.Date">
+			<column name="FechaCreacion" not-null="false" />
+		</property>
+
+	</class>
+</hibernate-mapping>

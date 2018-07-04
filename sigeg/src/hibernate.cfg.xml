@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.bytecode.use_reflection_optimizer">false</property>
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.password"></property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/SIGEG</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.default_schema">SIGEG</property>
+		<property name="hibernate.current_session_context_class">thread</property>
+		<mapping resource="co/edu/dataaccess/dao/AporteInvestigacion.hbm.xml" />
+		<mapping resource="co/edu/dataaccess/dao/AsistenciaEvento.hbm.xml" />
+		<mapping resource="co/edu/dataaccess/dao/CategoriaEvento.hbm.xml" />
+		<mapping resource="co/edu/dataaccess/dao/Egresado.hbm.xml" />
+		<mapping resource="co/edu/dataaccess/dao/EgresadoAporte.hbm.xml" />
+		<mapping resource="co/edu/dataaccess/dao/EgresadoReconocimiento.hbm.xml" />
+		<mapping resource="co/edu/dataaccess/dao/Evento.hbm.xml" />
+		<mapping resource="co/edu/dataaccess/dao/Facultad.hbm.xml" />
+		<mapping resource="co/edu/dataaccess/dao/FormaParticipacion.hbm.xml" />
+		<mapping resource="co/edu/dataaccess/dao/InformacionAcademica.hbm.xml" />
+		<mapping resource="co/edu/dataaccess/dao/InformacionControl.hbm.xml" />
+		<mapping resource="co/edu/dataaccess/dao/ParticipacionDemocratica.hbm.xml" />
+		<mapping resource="co/edu/dataaccess/dao/ParticipacionEgresado.hbm.xml" />
+		<mapping resource="co/edu/dataaccess/dao/Programa.hbm.xml" />
+		<mapping resource="co/edu/dataaccess/dao/Reconocimiento.hbm.xml" />
+		<mapping resource="co/edu/dataaccess/dao/TipoAporte.hbm.xml" />
+		<mapping resource="co/edu/dataaccess/dao/TipoEvento.hbm.xml" />
+		<mapping resource="co/edu/dataaccess/dao/TipoReconocimiento.hbm.xml" />
+		<mapping resource="co/edu/dataaccess/dao/Usuario.hbm.xml" />
+	</session-factory>
+</hibernate-configuration>

@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="co.edu.dataaccess.dao.Evento" table="Evento" catalog="SIGEG" optimistic-lock="version">
+
+		<id name="idEvento" type="java.lang.Long">
+			<column name="IdEvento" />
+			<generator class="identity" />
+		</id>
+		<property name="idTipoEvento" type="java.lang.Long">
+			<column name="IdTipoEvento" length="10" not-null="false" />
+		</property>
+		<property name="nombre" type="java.lang.String">
+			<column name="Nombre" length="40" not-null="false" />
+		</property>
+		<property name="fechaInicio" type="java.sql.Date">
+			<column name="FechaInicio" not-null="false" />
+		</property>
+		<property name="fechaFin" type="java.sql.Date">
+			<column name="FechaFin" not-null="true" />
+		</property>
+		<property name="lugar" type="java.lang.String">
+			<column name="Lugar" length="50" not-null="false" />
+		</property>
+		<property name="horaInicio" type="java.lang.String">
+			<column name="HoraInicio" length="0" not-null="false" />
+		</property>
+		<property name="duracionEstimada" type="java.lang.String">
+			<column name="DuracionEstimada" length="20" not-null="true" />
+		</property>
+		<property name="costoEgresado" type="java.lang.Long">
+			<column name="CostoEgresado" length="10" not-null="false" />
+		</property>
+		<property name="costoUniajc" type="java.lang.Long">
+			<column name="CostoUniajc" length="10" not-null="false" />
+		</property>
+		<property name="certificable" type="java.lang.Long">
+			<column name="Certificable" length="10" not-null="true" />
+		</property>
+		<property name="dependenciaOrganiza" type="java.lang.String">
+			<column name="DependenciaOrganiza" length="50" not-null="false" />
+		</property>
+		<property name="dependenciaBeneficiaria" type="java.lang.String">
+			<column name="DependenciaBeneficiaria" length="50" not-null="true" />
+		</property>
+		<property name="comunidadBeneficiaria" type="java.lang.String">
+			<column name="ComunidadBeneficiaria" length="50" not-null="true" />
+		</property>
+		<property name="personaACargo" type="java.lang.String">
+			<column name="PersonaACargo" length="70" not-null="true" />
+		</property>
+		<property name="correoElectronico" type="java.lang.String">
+			<column name="CorreoElectronico" length="50" not-null="true" />
+		</property>
+		<property name="telefono" type="java.lang.String">
+			<column name="Telefono" length="10" not-null="true" />
+		</property>
+		<property name="cuposEgresados" type="java.lang.Long">
+			<column name="CuposEgresados" length="10" not-null="true" />
+		</property>
+		<property name="bannerEvento" type="java.lang.Long">
+			<column name="BannerEvento" length="10" not-null="false" />
+		</property>
+		<property name="urlInscripcion" type="java.lang.String">
+			<column name="UrlInscripcion" length="500" not-null="false" />
+		</property>
+		<property name="urlExterna" type="java.lang.Long">
+			<column name="UrlExterna" length="10" not-null="false" />
+		</property>
+		<property name="soporte" type="java.lang.Long">
+			<column name="Soporte" length="10" not-null="false" />
+		</property>
+		<property name="fechaCreacion" type="java.sql.Date">
+			<column name="FechaCreacion" not-null="true" />
+		</property>
+	</class>
+</hibernate-mapping>

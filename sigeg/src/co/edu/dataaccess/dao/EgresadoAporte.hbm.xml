@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="co.edu.dataaccess.dao.EgresadoAporte" table="EgresadoAporte" catalog="SIGEG" optimistic-lock="version">
+
+		<id name="idEgresadoAporte" type="java.lang.Long">
+			<column name="IdEgresadoAporte" />
+			<generator class="identity" />
+		</id>
+		<property name="idAporteInvestigacion" type="java.lang.Long">
+			<column name="IdAporteInvestigacion" length="10" not-null="false" />
+		</property>
+		<property name="idEgresado" type="java.lang.Long">
+			<column name="IdEgresado" length="10" not-null="false" />
+		</property>
+		<property name="participacion" type="java.lang.String">
+			<column name="Participacion" length="1000" not-null="false" />
+		</property>
+		<property name="urlExterna" type="java.lang.String">
+			<column name="UrlExterna" length="1000" not-null="true" />
+		</property>
+		<property name="soporte" type="java.lang.Long">
+			<column name="Soporte" length="10" not-null="true" />
+		</property>
+	</class>
+</hibernate-mapping>

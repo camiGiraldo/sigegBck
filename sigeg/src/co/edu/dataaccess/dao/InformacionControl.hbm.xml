@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="co.edu.dataaccess.dao.InformacionControl" table="InformacionControl" catalog="SIGEG" optimistic-lock="version">
+
+		<id name="idInformacionControl" type="java.lang.Long">
+			<column name="IdInformacionControl" />
+			<generator class="identity" />
+		</id>
+		<property name="idEgresado" type="java.lang.Long">
+			<column name="IdEgresado" length="10" not-null="false" />
+		</property>
+		<property name="fechaEntregaCarnet" type="java.sql.Date">
+			<column name="FechaEntregaCarnet" not-null="true" />
+		</property>
+		<property name="encuestaM0En" type="java.sql.Date">
+			<column name="EncuestaM0En" not-null="true" />
+		</property>
+		<property name="encuestaM1En" type="java.sql.Date">
+			<column name="EncuestaM1En" not-null="true" />
+		</property>
+		<property name="encuestaM5En" type="java.sql.Date">
+			<column name="EncuestaM5En" not-null="true" />
+		</property>
+		<property name="gradoAcademusoft" type="java.lang.String">
+			<column name="GradoAcademusoft" length="20" not-null="false" />
+		</property>
+		<property name="recibeInformacion" type="java.lang.Long">
+			<column name="RecibeInformacion" length="10" not-null="true" />
+		</property>
+		<property name="tipoInformacion" type="java.lang.String">
+			<column name="TipoInformacion" length="100" not-null="true" />
+		</property>
+		<property name="observacionCorreo" type="java.lang.String">
+			<column name="ObservacionCorreo" length="200" not-null="true" />
+		</property>
+		<property name="observacionesGenerales" type="java.lang.String">
+			<column name="ObservacionesGenerales" length="200" not-null="true" />
+		</property>
+
+	</class>
+</hibernate-mapping>

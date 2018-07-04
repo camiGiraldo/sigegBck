@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="co.edu.dataaccess.dao.AsistenciaEvento" table="AsistenciaEvento" catalog="SIGEG" optimistic-lock="version">
+
+		<id name="idAsistenciaEvento" type="java.lang.Long">
+			<column name="idAsistenciaEvento" />
+			<generator class="identity" />
+		</id>
+		<property name="idEgresado" type="java.lang.Long">
+			<column name="IdEgresado" length="10" not-null="true" />
+		</property>
+		<property name="idEvento" type="java.lang.Long">
+			<column name="IdEvento" length="10" not-null="true" />
+		</property>
+		<property name="inscrito" type="java.lang.Long">
+			<column name="Inscrito" length="10" not-null="true" />
+		</property>
+		<property name="asistio" type="java.lang.Long">
+			<column name="Asistio" length="10" not-null="true" />
+		</property>
+		<property name="aprobo" type="java.lang.Long">
+			<column name="Aprobo" length="10" not-null="true" />
+		</property>
+	</class>
+</hibernate-mapping>

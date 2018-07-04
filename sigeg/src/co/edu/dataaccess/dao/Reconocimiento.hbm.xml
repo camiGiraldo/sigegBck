@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="co.edu.dataaccess.dao.Reconocimiento" table="Reconocimiento" catalog="SIGEG" optimistic-lock="version">
+
+		<id name="idReconocimiento" type="java.lang.Long">
+			<column name="IdReconocimiento" />
+			<generator class="identity" />
+		</id>
+		<property name="idTipoReconocimiento" type="java.lang.Long">
+			<column name="IdTipoReconocimiento" length="10" not-null="true" />
+		</property>
+		<property name="adjunto" type="java.lang.Long">
+			<column name="Adjunto" length="10" not-null="false" />
+		</property>
+		<property name="fechaVinculacion" type="java.sql.Date">
+			<column name="FechaVinculacion" not-null="true" />
+		</property>
+		<property name="lugarRealizacion" type="java.lang.String">
+			<column name="LugarRealizacion" length="100" not-null="true" />
+		</property>
+		<property name="beneficiario" type="java.lang.String">
+			<column name="Beneficiario" length="100" not-null="false" />
+		</property>
+		<property name="descripcion" type="java.lang.String">
+			<column name="Descripcion" length="200" not-null="false" />
+		</property>
+		<property name="soporte" type="java.lang.String">
+			<column name="Soporte" length="10" not-null="false" />
+		</property>
+		<property name="fechaCreacion" type="java.sql.Date">
+			<column name="FechaCreacion" not-null="false" />
+		</property>
+
+	</class>
+</hibernate-mapping>

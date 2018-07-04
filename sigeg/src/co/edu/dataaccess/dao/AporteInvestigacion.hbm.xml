@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="co.edu.dataaccess.dao.AporteInvestigacion" table="AporteInvestigacion" catalog="SIGEG" optimistic-lock="version">
+
+		<id name="idAporteInvestigacion" type="java.lang.Long">
+			<column name="IdAporteInvestigacion" />
+			<generator class="identity" />
+		</id>
+		<property name="idTipoAporte" type="java.lang.Long">
+			<column name="IdTipoAporte" length="10" not-null="false" />
+		</property>
+		<property name="fechaRealizacion" type="java.sql.Date">
+			<column name="FechaRealizacion" not-null="false" />
+		</property>
+		<property name="fechaFinalizacion" type="java.sql.Date">
+			<column name="FechaFinalizacion" not-null="true" />
+		</property>
+		<property name="grupoBeneficiario" type="java.lang.String">
+			<column name="GrupoBeneficiario" length="100" not-null="false" />
+		</property>
+		<property name="subGrupoBeneficiario" type="java.lang.String">
+			<column name="SubGrupoBeneficiario" length="100" not-null="true" />
+		</property>
+		<property name="nombreProyecto" type="java.lang.String">
+			<column name="NombreProyecto" length="100" not-null="false" />
+		</property>
+		<property name="descripcionProyecto" type="java.lang.String">
+			<column name="DescripcionProyecto" length="300" not-null="true" />
+		</property>
+		<property name="personaACargo" type="java.lang.String">
+			<column name="PersonaACargo" length="70" not-null="true" />
+		</property>
+		<property name="correoElectronico" type="java.lang.String">
+			<column name="CorreoElectronico" length="50" not-null="true" />
+		</property>
+		<property name="telefono" type="java.lang.String">
+			<column name="Telefono" length="10" not-null="true" />
+		</property>
+		<property name="adjunto" type="java.lang.Long">
+			<column name="Adjunto" length="10" not-null="true" />
+		</property>
+		<property name="fechaCreacion" type="java.sql.Date">
+			<column name="FechaCreacion" not-null="false" />
+		</property>
+	</class>
+</hibernate-mapping>
